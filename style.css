@@ -1,6 +1,25 @@
+@font-face {
+  font-family: "Muthiara";
+  src: url("Muthiara.otf");
+}
+
 img {
     width: 200px;
     border-radius: 30%
+}
+button {
+    padding: 10px 35px;
+    font-size: 1.5rem;
+    margin: 18px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    background-color:brown;
+    color: white;
+    border: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+button:active {
+    transform: scale(0.9)
 }
 .main {
     text-align: center;
@@ -10,6 +29,31 @@ img {
     line-height: 0.8;
     margin: 30px
 }
+
+#welcome {
+    margin: 20px;
+    margin-top: 80px;
+    padding: 2% 20px;
+    font-family: 'Muthiara', cursive; 
+    font-size: 70px;
+    background: linear-gradient(to bottom, rgb(223, 126, 163), rgb(119, 37, 51));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: upDown 3s ease-in-out infinite;
+}
+
+@keyframes upDown {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
 .fun {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: rgb(238, 215, 224);
@@ -27,4 +71,28 @@ img {
 }
 .page:hover{
     color:rgb(209, 68, 91)
+}
+/* ========= FUN PAGE!!!! ================ */ 
+/* gona make backgrounod blue */
+#fun-title {
+    margin: 0px;
+    margin-top: 10px;
+    font-family: 'Muthiara', cursive; 
+    font-size: 45px;
+    background: linear-gradient(to bottom, rgb(159, 203, 231), rgb(187, 59, 80));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: upDown 3s ease-in-out infinite;
+}
+
+@keyframes upDown {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
 }
