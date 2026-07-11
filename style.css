@@ -96,3 +96,11 @@ button:active {
         transform: translateY(15px);
     }
 }
+
+#home-btn {
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    
+
+}
