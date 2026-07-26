@@ -7,22 +7,11 @@ img {
     width: 200px;
     border-radius: 30%
 }
-button {
-    padding: 10px 35px;
-    font-size: 1.5rem;
-    margin: 18px; 
-    border-radius: 10px; 
-    cursor: pointer; 
-    background-color:brown;
-    color: white;
-    border: none;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-button:active {
-    transform: scale(0.9)
-}
+
 .main {
     text-align: center;
+    justify-content: center; /*centers L/R */
+    align-items: center; /*centers like vertically */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: rgb(238, 215, 224);
     color: rgb(110, 32, 75); 
@@ -30,6 +19,27 @@ button:active {
     margin: 30px
 }
 
+.container {
+    background: white;
+    border-radius: 10px;
+    margin: 50px auto; /* auto makes the l and r margins equal, 50px = top + bottom */
+        /* margin can have up to 4 values: top r bottom L */
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgb(87, 87, 159, 0.5);
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 #welcome {
     margin: 20px;
     margin-top: 80px;
@@ -98,9 +108,49 @@ button:active {
 }
 
 #home-btn {
-    border-radius: 5px;
+    display: inline-block; /* inline means same line(default); block = paragraph/box */
+    border-radius: 20px;
     text-decoration: none;
     padding: 10px 20px;
-    
+    background: rgb(195, 126, 155);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.3s transform;
+}
 
+#home-btn:hover { 
+    transform: scale(1.05);
+    background: rgb(153, 96, 120);
+}
+
+/*========== AMAZING FOOD PAGE ============= */
+
+.food-gallery {
+    display: flex; /* LR instead of UD */
+    gap: 60px; /*space between items in the parent(so the cards)*/
+    overflow-x: 0;
+    overflow-y: hidden; 
+}
+
+.food-card {
+    background: white;
+    border-radius: 2px;
+    margin: 50px auto; /*space AROUND element*/
+    width: 250px;
+    padding: 10px 0 20px 0; /* space INSIDe element */
+    text-align: center;
+    flex-shrink: 0; /*prevents from shrinking if no room */
+    box-shadow: 0px 8px 20px rgba(159, 87, 134, 0.5);
+    animation: fade 1s ease;
+    transition: 0.3s ease; /* gotta put it here or else itll only be smooth when i hover */
+}
+
+.food-card img {
+    width: 200px;
+    border-radius: 0;
+    height: 300px;
+    object-fit: cover; /*crops instead of sstttretching */
+}
+.food-card:hover {
+    transform: scale(1.03) rotate(3deg);
 }
