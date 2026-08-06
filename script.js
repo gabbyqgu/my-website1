@@ -20,6 +20,10 @@ const quote_bank = [
     "never stay up late for something you wouldn't wake up early for",
     "ask urself if what ur doing today is getting u closer to where you want to be tomorrow.",
     "climb high, climb far, your goal the sky, your aim the star ⭐☁️",
+    "lock in bro",
+    "be happy :)",
+    "smile!! :D",
+    "risk is always better than regret ._."
 ]
 
 /* addEventListener allows ur webpage to listen/respond to user interactions(clicks, keypresses, etc)*/

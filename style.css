@@ -84,6 +84,14 @@ img {
 }
 /* ========= FUN PAGE!!!! ================ */ 
 /* gona make backgrounod blue */
+.fun-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* align items to the top */
+    margin-top: 50px;
+    gap: 100px;
+}
+
 #fun-title {
     margin: 0px;
     margin-top: 10px;
@@ -106,7 +114,9 @@ img {
         transform: translateY(15px);
     }
 }
-
+#cookie {
+    width: 350px;
+}
 #cookie:hover {
     transform: scale(1.05);
     cursor: pointer;
@@ -116,9 +126,16 @@ img {
     transform: scale(1.08);
 }
 
-
+.cookie-clicker {
+    width: 500px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
 #home-btn {
     display: inline-block; /* inline means same line(default); block = paragraph/box */
+    position: fixed;
+    top: 30px;
+    left: 30px;
     border-radius: 20px;
     text-decoration: none;
     padding: 10px 20px;
