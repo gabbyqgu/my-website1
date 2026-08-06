@@ -107,11 +107,22 @@ img {
     }
 }
 
+#cookie:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#cookie:active {
+    transform: scale(1.08);
+}
+
+
 #home-btn {
     display: inline-block; /* inline means same line(default); block = paragraph/box */
     border-radius: 20px;
     text-decoration: none;
     padding: 10px 20px;
+    margin: 30px;
     background: rgb(195, 126, 155);
     color: white;
     font-family: 'Courier New', Courier, monospace;
@@ -125,19 +136,51 @@ img {
 
 /*========== AMAZING FOOD PAGE ============= */
 
-.food-gallery {
-    display: flex; /* LR instead of UD */
-    gap: 60px; /*space between items in the parent(so the cards)*/
-    overflow-x: 0;
-    overflow-y: hidden; 
+.food-page {
+    background: linear-gradient(to bottom, #f1cedb, #fdeef5);
+    font-family:'Courier New', Courier, monospace;
+    margin: 30px;
 }
 
+.food-page h1 {
+    font-family: "Muthiara", cursive;
+    background: linear-gradient(to bottom, rgb(223, 126, 163), rgb(119, 37, 51));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.food-gallery {
+    display: flex; /* LR instead of UD */
+    gap: 50px; /*space between items in the parent(so the cards)*/
+    overflow-x: auto;
+    overflow-y: hidden; 
+    padding: 0px 30px; /*0px u/d, 30px l/r INSIDE */
+    scroll-behavior: smooth; 
+}
+
+.food-gallery::-webkit-scrollbar {
+    height: 20px;
+    background: #fdeef5;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.food-gallery::-webkit-scrollbar-thumb {
+    background: #f7c3d6;
+    border-radius: 20px;
+    border: 2px solid #fdeef5;
+    cursor: grab;
+}
 .food-card {
     background: white;
-    border-radius: 2px;
+    border-radius: 3px;
     margin: 50px auto; /*space AROUND element*/
-    width: 250px;
-    padding: 10px 0 20px 0; /* space INSIDe element */
+    color: rgb(172, 95, 108);
+    width: 220px;
+    padding: 20px 20px 28px 20px; /* space INSIDe element */
     text-align: center;
     flex-shrink: 0; /*prevents from shrinking if no room */
     box-shadow: 0px 8px 20px rgba(159, 87, 134, 0.5);
@@ -146,7 +189,7 @@ img {
 }
 
 .food-card img {
-    width: 200px;
+    width: 100%;
     border-radius: 0;
     height: 300px;
     object-fit: cover; /*crops instead of sstttretching */
@@ -154,3 +197,8 @@ img {
 .food-card:hover {
     transform: scale(1.03) rotate(3deg);
 }
+
+#subtitle {
+    font-style: italic;
+}
+
