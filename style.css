@@ -82,6 +82,30 @@ img {
 .page:hover{
     color:rgb(209, 68, 91)
 }
+
+nav {
+    display: flex;
+    justify-content: center; /*centers horizontally*/
+    margin: 0px;
+    gap: 30px;
+}
+
+nav a {
+    background: rgb(250, 245, 182);
+    color: rgb(194, 132, 132);
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 100px;
+}
+
+nav a:hover {
+    transform: scale(1.04);
+    background: rgb(228, 121, 121);
+}
+
+nav a:active {
+    transform: scale(1.08);
+}
 /* ========= FUN PAGE!!!! ================ */ 
 /* gona make backgrounod blue */
 .fun-layout {
@@ -133,9 +157,6 @@ img {
 }
 #home-btn {
     display: inline-block; /* inline means same line(default); block = paragraph/box */
-    position: fixed;
-    top: 30px;
-    left: 30px;
     border-radius: 20px;
     text-decoration: none;
     padding: 10px 20px;
