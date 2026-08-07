@@ -26,8 +26,17 @@ const quote_bank = [
     "risk is always better than regret ._."
 ]
 
+const colors = [
+    "#9755A3",
+    "#A8284A",
+    "#688DAB",
+    "#88A387",
+    "#a48c2c",
+]
 /* addEventListener allows ur webpage to listen/respond to user interactions(clicks, keypresses, etc)*/
 cookie.addEventListener("click", function() { /*when u click the cookie run the function */
     const random = Math.floor(Math.random() /*random from 0 to 1*/* quote_bank.length /*how many items in the list*/ ); /* so it rounds down, picking a random quote!*/
     quote.textContent = quote_bank[random]; /*indexing bc random is a #*/
+    const randomColor = Math.floor(Math.random() * colors.length);
+    quote.style.color = colors[randomColor];
 });
