@@ -31,8 +31,13 @@ html, body {
     padding: 30px;
     box-shadow: 0px 8px 20px rgb(87, 87, 159, 0.5);
     animation: fade 1s ease;
+    transition: 0.5s ease;
+
 }
 
+.container:hover {
+    transform: rotate(3deg);
+}
 @keyframes fade {
     from {
         opacity: 0;
@@ -203,6 +208,43 @@ nav a:active {
     background: rgb(153, 96, 120);
 }
 
+.flowers img {
+    position: fixed;
+    image-rendering: pixelated;
+    user-select: none;
+    transition: transform 1s ease;
+    z-index: 1;
+}
+
+.flowers img:hover {
+    transform: rotate(360deg) scale(1.4);
+    cursor: pointer;
+}
+
+#purple-flower {
+    width: 100px;
+    top: 12%;
+    left: 10%;
+}
+
+#pink-flower {
+    width: 160px;
+    top: 30%;
+    right: 3%;
+}
+
+#purple-flower2 {
+    width: 130px;
+    bottom: 15%;
+    right: 24%;
+}
+
+#pink-flower2 {
+    width: 180px;
+    bottom: 23%;
+    left: 20%;
+}
+
 /*========== AMAZING FOOD PAGE ============= */
 
 .food-page {
@@ -271,3 +313,12 @@ nav a:active {
     font-style: italic;
 }
 
+/*========DOGGY PAGE ======= */
+.dog-page {
+    background: rgb(254, 244, 209);
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    padding: 60px 30px;
+    box-sizing: border-box;
+}
